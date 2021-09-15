@@ -16,15 +16,16 @@ class HelloWorldSalutation {
    */
   public function getSalutation() {
     $time = new \DateTime();
+    $time_written = $time->format('G');
     if ((int) $time->format('G') >= 12 && (int) $time->format('G') < 18) {
-      return $this->t('Good afternoon world because it is ' . $time);
+      return $this->t('Good afternoon world because it is ' . $time_written);
     }
     if ((int) $time->format('G') >= 00 && (int) $time->format('G') < 12) {
-      return $this->t('Good morning world because it is ' . $time);
+      return $this->t('Good morning world because it is ' . $time_written);
     }
 
     if ((int) $time->format('G') >= 18) {
-      return $this->t('Good evening world because it is ' . $time);
+      return $this->t('Good evening world because it is ' . $time_written);
     }
 
   }
