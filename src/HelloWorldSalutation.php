@@ -17,14 +17,14 @@ class HelloWorldSalutation {
   public function getSalutation() {
     $time = new \DateTime();
     if ((int) $time->format('G') >= 12 && (int) $time->format('G') < 18) {
-      return $this->t('Good afternoon world');
+      return $this->t('Good afternoon world because it is ' . $time);
     }
     if ((int) $time->format('G') >= 00 && (int) $time->format('G') < 12) {
-      return $this->t('Good morning world');
+      return $this->t('Good morning world because it is ' . $time);
     }
 
     if ((int) $time->format('G') >= 18) {
-      return $this->t('Good evening world');
+      return $this->t('Good evening world because it is ' . $time);
     }
 
   }
