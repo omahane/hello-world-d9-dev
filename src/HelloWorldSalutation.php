@@ -16,7 +16,7 @@ class HelloWorldSalutation {
    */
   public function getSalutation() {
     $time = new \DateTime();
-    $time_written = $time->format('G');
+    $time_written = $time->format('G:i');
     if ((int) $time->format('G') >= 12 && (int) $time->format('G') < 18) {
       return $this->t('Good afternoon world because it is ' . $time_written);
     }
