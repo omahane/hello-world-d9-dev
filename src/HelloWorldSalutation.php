@@ -3,7 +3,7 @@
 // https://learning.oreilly.com/library/view/drupal-9-module/9781800204621/B16296_02_Final_ASB_ePub.xhtml#_idParaDest-33
 //
 namespace Drupal\hello_world;
-use Drupal\Core\StringTranslationTrait;
+use Drupal\Core\StringTranslation\StringTranslationTrait;
 
 /**
  * Prepares the salutation to the world.
